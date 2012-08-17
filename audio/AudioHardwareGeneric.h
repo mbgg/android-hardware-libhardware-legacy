@@ -93,6 +93,16 @@ public:
     virtual String8     getParameters(const String8& keys);
     virtual unsigned int  getInputFramesLost() const { return 0; }
 
+    virtual status_t addAudioEffect(effect_handle_t effect)
+    {
+		return 0;
+    }
+
+    virtual status_t removeAudioEffect(effect_handle_t effect)
+    {
+		return 0;
+    }
+
 private:
     AudioHardwareGeneric *mAudioHardware;
     Mutex   mLock;
